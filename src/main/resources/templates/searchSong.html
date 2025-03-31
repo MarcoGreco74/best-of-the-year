@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Greeting</title>
+</head>
+<body>
+<div>
+<h1>Movies</h1>
+<div th:if = "${songId != null}">
+    <p th:text="'Canzone trovata '+ ${songId.title}"></p>
+</div>
+<div th:if = "${songId == null}">
+    <p th:text="'Canzone non trovata '"></p>
+</div>
+</div>
+</body>
+</html>

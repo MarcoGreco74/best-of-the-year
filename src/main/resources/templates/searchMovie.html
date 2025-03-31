@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Greeting</title>
+</head>
+<body>
+<div>
+<h1>Movies</h1>
+<div th:if = "${movieId != null}">
+    <p th:text="'Film trovato '+ ${movieId.title}"></p>
+</div>
+<div th:if = "${movieId == null}">
+    <p th:text="'Film non trovato '"></p>
+</div>
+</div>
+</body>
+</html>
