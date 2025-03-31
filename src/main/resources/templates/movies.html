@@ -6,9 +6,7 @@
 <body>
 <div>
 <h1>Movies</h1>
-<ul>
-    <li th:each="movies : ${listFilm}" th:text="${movies.title}"></li>
-</ul>
+     <span th:each="movies : ${listFilm}" th:text="${movies.title}+', '"></span>
 </div>
 </body>
 </html>
