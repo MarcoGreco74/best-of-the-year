@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head th:replace="head :: common_header">
+</head>
+<body>
+    <div th:replace="topbar :: common_topbar"></div>
+    <div class="container text-center m-5 border border-dark">
+    <h3>Best Movies</h3>
+    <ul class="list-group">
+        <a th:href="@{/movieID?id=1}" class="list-group-item list-group-item-action"><li class="list-group-item">Primo = [[${listFilm[0].title}]]</li></a>
+        <a th:href="@{/movieID?id=2}" class="list-group-item list-group-item-action"><li class="list-group-item">Secondo = [[${listFilm[1].title}]]</li></a>
+        <a th:href="@{/movieID?id=3}" class="list-group-item list-group-item-action"><li class="list-group-item">Terzo = [[${listFilm[2].title}]]</li></a>
+        <a th:href="@{/movieID?id=5}" class="list-group-item list-group-item-action"><li class="list-group-item">Quarto = [[${listFilm[4].title}]]</li></a>
+        <a th:href="@{/movieID?id=4}" class="list-group-item list-group-item-action"><li class="list-group-item">Quinto = [[${listFilm[3].title}]]</li></a>
+    </ul>
+    </div>
+</body>
+</html>

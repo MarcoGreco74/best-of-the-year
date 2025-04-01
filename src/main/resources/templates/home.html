@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="head :: common_header">
+</head>
+<body th:fragment="common_body">
+    <main>
+    <div th:replace="topbar :: common_topbar"></div>
+      <div class="container text-center m-5 border border-dark">
+        <h3>Best of by...</h3>
+        <div class="row row-cols-1">
+          <div class="col"><img alt="placeholderImg" th:src="@{/images/placeholderImg.png}"></div>
+          <div class="col"><p th:insert="loremIpsum :: common_loremIpsum"></p></div>
+        </div>
+      </div>
+    </main>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

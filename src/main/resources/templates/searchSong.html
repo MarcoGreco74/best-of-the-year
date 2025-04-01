@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Greeting</title>
+<head th:replace="head :: common_header">
 </head>
 <body>
+<div th:replace="topbar :: common_topbar"></div>
 <div>
-<h1>Movies</h1>
+<h1>Songs</h1>
 <div th:if = "${songId != null}">
-    <p th:text="'Canzone trovata '+ ${songId.title}"></p>
+    <p th:text="'Canzone trovata '+ ${songId.title} +' Lorem ipsum...descrizione'"></p>
 </div>
 <div th:if = "${songId == null}">
     <p th:text="'Canzone non trovata '"></p>

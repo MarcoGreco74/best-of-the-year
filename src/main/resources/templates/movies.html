@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Greeting</title>
+<head th:replace="head :: common_header">
 </head>
-<body>
+<body th:replace="home :: common_body">
+    <div th:insert="head.html :: siteHeader"></div>  
 <div>
-<h1>Movies</h1>
+<h2>Movies</h2>
      <span th:each="movies : ${listFilm}" th:text="${movies.title}+', '"></span>
 </div>
+
+<hr/>
+
 </body>
 </html>
